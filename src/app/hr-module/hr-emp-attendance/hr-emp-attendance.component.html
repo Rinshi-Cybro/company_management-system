@@ -1,0 +1,67 @@
+
+<!-- <p-dialog header="Attendance Register" [style]="{ width: '50vw', height: '90vw' }"> -->
+    <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <div class="col-11 bg-body-secondary rounded fs-5 gap-3">
+            <h4 class="text-center mt-1">Employee Attendance Register</h4>
+            <div class="py-3">
+                <p-table *ngIf="EmployeeData.length" [value]="EmployeeData" styleClass="p-datatable-striped">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th pSortableColumn="id">
+                                Employee Name <p-sortIcon field="id"></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="role">
+                                User Role <p-sortIcon field="role"></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="Name">
+                                Email <p-sortIcon field="Name"></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="attendance">
+                                Attendance <p-sortIcon field="attendance"></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="attendance">Action<p-sortIcon></p-sortIcon>
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-user let-i="rowIndex">
+                        <tr
+                            [ngClass]="{ 'bg-opacity-10 bg-light' : !user.isEnabled , 'bg-opacity-10 bg-warning' : user.role == 'not Assigned', }">
+                            <td>{{user.firstName}} {{user.lastName}}</td>
+                            <td class="badge badge-align" [ngClass]="{
+                                'bg-success' : user.userRole.code == 'hr',
+                                'bg-info' : user.userRole.code == 'team_leader',
+                                'bg-primary' : user.userRole.code == 'developer',
+                                'bg-warning' : user.userRole.code == 'qa',
+                                'bg-dark' : user.userRole.code == 'project_manager',
+                                'bg-light text-dark' : user.userRole == 'not Assigned',
+                                }">
+                                {{user.userRole.name}}
+                            </td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.attendance}}</td>
+
+                            <td class="edit-button d-flex gap-2">
+                                <input type="radio" class="btn-check" name="options-base{{ i }}" id="option{{ i }}"
+                                    autocomplete="off" [(ngModel)]="EmpAttendanceArray[i]" [value]="true" />
+                                <label class="btn btn-outline-success" for="option{{ i }}"><i
+                                        class="bi bi-check"></i></label>
+
+                                <input type="radio" class="btn-check" name="options-base{{ i }}" id="option2{{ i }}"
+                                    autocomplete="off" [(ngModel)]="EmpAttendanceArray[i]" [value]="false" />
+                                <label class="btn btn-outline-danger" for="option2{{ i }}"><i
+                                        class="bi bi-x"></i></label>
+                            </td>
+
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+
+
+            <!-- <div class="row-cols-6 d-flex align-self-end justify-content-center gap-2 mb-3">
+                <button (click)="AddAttendance()" class="btn btn-primary" type="button"> Save </button>
+                <button (click)="AttendancePopupToggle = false" class="btn btn-primary" type="button" > close </button>
+            </div> -->
+        </div>
+    </div>
+<!-- </p-dialog> -->

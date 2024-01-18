@@ -1,0 +1,46 @@
+
+
+<section class="section about-section gray-bg" id="about">
+    <div class="usr-about row justify-content-center" [style]="{width: '85%'}">
+        <div class="card mt-4 align-items-center col-lg-3">
+            <p-card class="text-align-center mt-1" header="Employee Details" [style]="{width: '100%'}">
+                <p-table [value]="registredUserArray" [tableStyle]="{'min-width': '57rem'}">
+
+                    <ng-template pTemplate="header" let-columns>
+                        <tr>
+                            <th pSortableColumn="username" style="width:9%; text-align: center;"> User Name <p-sortIcon
+                                    field="username"></p-sortIcon></th>
+                            <th pSortableColumn="role" style="width:9%; text-align: center;"> Role <p-sortIcon
+                                    field="role"></p-sortIcon></th>
+                            <th pSortableColumn="phone" style="width:9%; text-align: center;"> Phone no <p-sortIcon
+                                    field="phone"></p-sortIcon></th>
+                            <th pSortableColumn="country" style="width:9%; text-align: center;"> Country <p-sortIcon
+                                    field="country"></p-sortIcon></th>
+                            <th pSortableColumn="email" style="width:5%; text-align: center;"> Email  <p-sortIcon
+                                    field="email"></p-sortIcon></th>
+                            <th pSortableColumn="action" style="width: 5%; text-align: center;"> Actions <p-sortIcon
+                                    field="action"></p-sortIcon></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-columns="columns" let-user>
+                        <tr>
+                            <td style="width:9%; text-align: center;">{{user.firstName}} {{user.lastName}}</td>
+                            <td style="width:9%; text-align: center;">{{user.userRole.name}}</td>
+                            <td style="width:9%; text-align: center;">{{user.phone}}</td>
+                            <td style="width:9%; text-align: center;">{{user.selectedCountry.name}}</td>
+                            <td style="width:9%; text-align: center;">{{user.email}}</td>
+                            <td>
+                                <button pButton pRipple label="Edit" style="margin-left: 5px; height: 30px; width: 90px; margin: 9px" class="p-button-info">
+                                </button>
+                                <button pButton pRipple label="Delete" style="margin-left: 5px; height: 30px; margin: 9px;" class="p-button-danger"
+                                    (click)="DeleteUser(user.id)">
+                                </button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </p-card>
+        </div>
+    </div>
+</section>
+

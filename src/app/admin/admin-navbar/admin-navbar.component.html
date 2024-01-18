@@ -1,0 +1,52 @@
+<nav class="navbar bg-dark border-bottom navbar-expand-lg navbar-light border-body" data-bs-theme="dark">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto topnav"> </ul>
+    </div>
+    <ul class="nav">
+        <li class="nav-item active" style="text-align: end; margin-right: 13px;">
+            <a class="nav-link btn btn-danger text-white" type="button" style="background-color: rgb(165, 17, 17);"
+                (click)="logOut()">Log out</a>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="link">
+    <div class="col-md-4">
+        <!-- Sidebar -->
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-light">
+            <div class="position-sticky">
+                <h4 style="color: rgb(0, 0, 0); margin-left: 15px; margin-top: -55px;">Petro Infotech</h4>
+                <div class="list-items1 list-group-flush mx-3 mt-4">
+
+                    <a [routerLink]="['admin_home']" class="list-items2 list-group-item list-group-item-action py-2 ripple"
+                        id="over" aria-current="true">
+                        <span id="over">Home</span>
+                    </a>
+
+                    <a [routerLink]="['user_list']" class="list-items2 list-group-item list-group-item-action py-2 ripple"
+                        id="over" aria-current="true">
+                        <span id="over">User List</span>
+                    </a>
+
+                    <a [routerLink]="['admin_announcement']" id="over"
+                        class="list-items2 list-group-item list-group-item-action py-2 ripple">
+                        <span>Announcement</span>
+                    </a>
+
+                    <a [routerLink]="['admin_jobpost']" id="over" class="list-items2 list-group-item list-group-item-action py-2 ripple">
+                        <span>Post Job</span>
+                    </a>
+
+                    <a [routerLink]="['admin_feedback']" id="over" class="list-items2 list-group-item list-group-item-action py-2 ripple ">
+                        <span>Feedback</span>
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="col-md-8">
+        <router-outlet></router-outlet>
+    </div>
+</div>

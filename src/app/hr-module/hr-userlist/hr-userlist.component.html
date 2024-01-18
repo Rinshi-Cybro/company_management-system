@@ -1,0 +1,68 @@
+
+<section class="section about-section gray-bg" id="about" >
+    <div class="usr-about row justify-content-center" [style]="{width: '86%'}" >
+        <div class="card mt-4 align-items-center col-lg-3" >
+            <p-card class="body-color text-align-center mt-1" header="Employee Details" [style]="{width: '100%'}" >
+                <p-table  [value]="EmployeeData" [tableStyle]="{'min-width': '58rem'}" styleClass="p-datatable-striped">
+
+                    <ng-template pTemplate="header" let-columns>
+                        <tr>
+                            <th pSortableColumn="username" style="width:5%; text-align: center;">
+                                User Name <p-sortIcon field="username"></p-sortIcon>
+                            </th>
+
+                            <th pSortableColumn="role" style="width:5%; text-align: center;">
+                                Role <p-sortIcon field="role"></p-sortIcon>
+                            </th>
+
+                            <th pSortableColumn="phone" style="width: 14%; text-align: center;">
+                                Phone no <p-sortIcon field="phone"></p-sortIcon>
+                            </th>
+
+                            <th pSortableColumn="country" style="width: 4%; text-align: center;">
+                                Email <p-sortIcon field="country"></p-sortIcon>
+                            </th>
+
+                            <th pSortableColumn="email" style="width: 5%; text-align: center;">
+                                Basic salary <p-sortIcon field="email"></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="action" style="width: 5%; text-align: center;">
+                                Attendance <p-sortIcon field="action"></p-sortIcon>
+                            </th>
+
+                            <th pSortableColumn="action" style="width: 15%; text-align: center;">
+                                Actions <p-sortIcon field="action"></p-sortIcon>
+                            </th>
+                        </tr>
+                    </ng-template>
+
+                    <ng-template pTemplate="body" let-columns="columns" let-user let-i="rowIndex">
+                        <tr>
+                            <td style="width:5%; text-align: center;">{{user.firstName}} {{user.lastName}}</td>
+
+                            <td style="width:91%; text-align: center;" class="badge badge-settings" [ngClass]="{
+                                'bg-success' : user.userRole.code == 'hr',
+                                'bg-info' : user.userRole.code == 'team_leader',
+                                'bg-primary' : user.userRole.code == 'developer',
+                                'bg-warning' : user.userRole.code == 'qa',
+                                'bg-dark' : user.userRole.code == 'project_manager',
+                                'bg-light text-dark' : user.userRole == 'not Assigned',
+                            }">
+                                {{user.userRole.name}}</td>
+                            <td style="width:5%; text-align: center;">{{user.phone}}</td>
+                            <td style="width:5%; text-align: center;">{{user.email}}</td>
+                            <td style="width:5%; text-align: center;">{{user.attendance}}</td>
+                            <td style="width:5%; text-align: center;">{{user.basic_salary}}</td>
+                            <td>
+                                <button pButton pRipple label="Edit"
+                                    style="margin-left: 5px; height: 30px; width: 90px; margin: 9px"
+                                    class="p-button-info">
+                                </button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </p-card>
+        </div>
+    </div>
+</section>

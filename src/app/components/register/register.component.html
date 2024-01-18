@@ -1,0 +1,85 @@
+<p>register works!</p>
+
+<div class="flex flex-column align-items-center justify-content-center">
+    <form #regForm="ngForm" (ngSubmit)="regForm.valid && onSubmit()" class="formcontainer">
+        <h1>Registration</h1><br>
+
+        <label class="form-label" htmlFor="fullname">Full Name</label>
+        <div class="row">
+            <div class="col">
+                <input type="text" pInputText name="firstName" placeholder="First name" class="form-control form_input" [(ngModel)]="registerData.firstName" />
+                <!-- <input type="text" class="form-control" name="firstName" [(ngModel)]="empData.firstName" required #firstName="ngModel"> -->
+                <!-- <small class="text-danger" *ngIf="empForm.submitted && firstName.errors?.['required']"> First Name is required </small> -->
+            </div>
+            <div class="col">
+                <input type="text" pInputText name="lastName" placeholder="Last name" class="form-control form_input" [(ngModel)]="registerData.lastName" />
+            </div>
+        </div>
+
+        <label class="form-label" htmlFor="address">Address</label>
+        <div class="row">
+            <div class="col">
+                <input type="text" pInputText  name="address1" placeholder="Address line " class="form-control form_input" [(ngModel)]="registerData.address1" />
+            </div>
+        </div> 
+
+        <label class="form-label" htmlFor="phone">Phone</label>
+        <div class="row">
+            <div class="col">
+                <p-inputMask mask="999-999-9999" name="phone" [(ngModel)]="registerData.phone" class="form-control form_input" placeholder="999-999-9999" ></p-inputMask>
+            </div>
+        </div>
+        
+        <label class="form-label" htmlFor="Country">Country</label>
+        <div class="row">
+            <div class="col">
+                <p-dropdown [options]="countries" name="Country" [(ngModel)]="registerData.selectedCountry" optionLabel="name" [showClear]="false" class="form-control form_input" placeholder="Select a Country"></p-dropdown>
+                <!-- <p-dropdown [options]="countries" name="Country" [(ngModel)]="registerData.selectedCountry" optionLabel="name" showClear="true" placeholder="Select a Country"></p-dropdown> -->
+            </div>
+            <div class="col">
+                <label class="form-label" htmlFor="state">State/Region</label>
+                <input type="text" pInputText name="state" placeholder="State" class="form-control form_input" [(ngModel)]="registerData.state" />
+            </div>
+        </div>  
+        
+        <label class="form-label" htmlFor="email">Email</label>
+        <div class="row">
+            <div class="col">
+                <input type="email" pInputText name="email" placeholder="Email" class="form-control form_input" [(ngModel)]="registerData.email" />
+            </div>
+        </div> 
+        
+        <label class="form-label" htmlFor="password">Password</label>
+        <div class="row">
+            <div class="col">
+                <p-password type="password" [(ngModel)]="registerData.password" class="form-control form_input" name="password"  [toggleMask]="true" placeholder="Password" ></p-password>
+            </div>
+        </div>
+
+        
+        <label class="form-label" htmlFor="userRole">User Type</label>
+        <div class="row">
+            <div class="col">
+                <p-dropdown [options]="roles" name="Role" [(ngModel)]="registerData.userRole" optionLabel="name" [showClear]="false" class="form-control form_input" placeholder="Select User Type"></p-dropdown>
+                <!-- <input type="text" pInputText  name="userRole" placeholder="Select User Role" class="form-control form_input" [(ngModel)]="registerData.userRole" /> -->
+            </div>
+        </div> 
+
+
+        <div class="btn_container flex justify-content-center">
+            <button type="submit" pButton pRipple label="Register" class="p-button-secondary form_button"></button>
+            <!-- <button pButton pRipple label="Cancel" class="p-button-secondary form_button"></button> -->
+        </div>
+        <p class="text-center text-muted mt-5 mb-0">Already have an account? <a routerLink="/login" class="fw-bold text-body">
+            <u>Login here</u></a>
+        </p>
+    </form>
+</div>  
+
+<p-toast [life]="5500"></p-toast>
+
+
+
+
+
+

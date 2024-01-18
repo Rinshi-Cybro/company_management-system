@@ -1,0 +1,91 @@
+
+.formcontainer {
+    margin: 0 auto;
+    /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #ece7e7; */
+    background-color: #eae5e5;
+    padding: 2rem;
+    width: 70%;
+    max-width: 1000px;
+    border-radius: 10px;
+    margin-bottom: 45px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    /* Center items vertically */
+    /* height: 100vh; Set the height to 100% of the viewport height */
+}
+
+
+.form-label {
+    font-weight: bolder
+}
+
+.form_input::placeholder {
+    color: #ffffff;
+}
+
+.form_input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: .75rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    outline: none;
+    color: #ffffff;
+    background: #6e6c6c;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form_input:focus {
+    border-color: #ffffff;
+    background: #8d8a8a;
+
+}
+
+
+.form_button {
+    /* width: 5rem; */
+    /* padding: .25rem;
+  margin: .75rem; */
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* color: #ffffff; */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 15px;
+    /* background: black; */
+}
+
+
+.btn_container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    flex: 1;
+    margin: 5px;
+}

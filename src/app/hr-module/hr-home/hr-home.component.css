@@ -1,0 +1,30 @@
+
+.usr-about {
+    background-color: cadetblue;
+}
+
+.p-card {
+    background-color: lightsteelblue;
+
+}
+
+.card  {
+    width: 950px; 
+    /* margin-left: 5px; */
+    margin-top: 25px;
+    height: 320px;
+}
+
+.form-label {
+    font-weight: bolder
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    flex: .4;
+    margin: 0px;
+} 

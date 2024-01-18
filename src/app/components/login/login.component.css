@@ -1,0 +1,28 @@
+#grad {
+    /* background: linear-gradient(to right, #348f50, #56b4d3); */
+    background: linear-gradient(to right, #545555, #c4c6ca);
+}
+
+.form_button {
+    width: 8rem;
+    /* padding: .25rem;
+  margin: .75rem; */
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 15px;
+    /* background: black; */
+}
+
+.btn_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-label {
+    font-weight: bolder
+}

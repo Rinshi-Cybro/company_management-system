@@ -1,0 +1,39 @@
+
+.section {
+    position: relative;
+    top: 16px;
+    /* z-index: -1; */
+    width: 100%;
+    height: 110%;
+}
+
+.usr-about {
+    background-color: cadetblue;
+}
+
+.p-card {
+    background-color: lightsteelblue;
+
+}
+
+.card {
+    width: 800px; 
+    margin-top: 50px;
+}
+
+.form-label {
+    font-weight: bolder
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    flex: .4;
+    margin: 0px;
+}
+
+
+

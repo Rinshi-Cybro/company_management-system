@@ -1,0 +1,134 @@
+{
+  "user-Register": [
+    {
+      "firstName": "Rinshid",
+      "lastName": "Ak",
+      "address1": "Anchukandan (h), Vengara",
+      "phone": "978-090-5426",
+      "selectedCountry": {
+        "name": "India",
+        "code": "IND"
+      },
+      "state": "kerala",
+      "email": "rinshi@admin.com",
+      "password": "12345",
+      "basic_salary": 0,
+      "attendance": 0,
+      "userRole": {
+        "name": "Admin",
+        "code": "admin"
+      },
+      "id": 1
+    },
+    {
+      "firstName": "Kamil",
+      "lastName": "shadob",
+      "address1": "Kattil (h), Calicut",
+      "phone": "956-807-8400",
+      "selectedCountry": {
+        "name": "Rome",
+        "code": "RM"
+      },
+      "state": "kerala",
+      "email": "kamil@hr.com",
+      "password": "1234",
+      "basic_salary": 0,
+      "attendance": 0,
+      "userRole": {
+        "name": "HR",
+        "code": "hr"
+      },
+      "id": 2
+    },
+    {
+      "firstName": "Farseen",
+      "lastName": "Jallaa",
+      "address1": "Kannadeth (h), Vazhakad ",
+      "phone": "959-087-5467",
+      "selectedCountry": {
+        "name": "London",
+        "code": "LDN"
+      },
+      "state": "Tamilnadu",
+      "email": "farsee@qa.com",
+      "password": "12345",
+      "basic_salary": 0,
+      "attendance": 0,
+      "userRole": {
+        "name": "QA",
+        "code": "qa"
+      },
+      "id": 3
+    },
+    {
+      "firstName": "Shafaf",
+      "lastName": "k",
+      "address1": "kappil (h), Koilandi",
+      "phone": "990-877-6534",
+      "selectedCountry": {
+        "name": "Istanbul",
+        "code": "IST"
+      },
+      "state": "Karnataka",
+      "email": "shafaf@developer.com",
+      "password": "1234",
+      "basic_salary": 0,
+      "attendance": 0,
+      "userRole": {
+        "name": "Developer",
+        "code": "developer"
+      },
+      "id": 4
+    },
+    {
+      "firstName": "Hashil",
+      "lastName": "NK",
+      "address1": "Chukkan (h), Calicut",
+      "phone": "899-075-3456",
+      "selectedCountry": {
+        "name": "Paris",
+        "code": "PRS"
+      },
+      "state": "Kerala",
+      "email": "hashil@teamleader.com",
+      "password": "12345",
+      "basic_salary": 0,
+      "attendance": 0,
+      "userRole": {
+        "name": "Team Leader",
+        "code": "team_leader"
+      },
+      "id": 5
+    },
+    {
+      "firstName": "Hameed",
+      "lastName": "Ak",
+      "address1": "Anchukandan (h), Vengara",
+      "phone": "909-876-3457",
+      "selectedCountry": {
+        "name": "India",
+        "code": "IND"
+      },
+      "state": "Kerala",
+      "email": "hameed@pm.com",
+      "password": "123",
+      "basic_salary": 0,
+      "attendance": 0,
+      "userRole": {
+        "name": "Project Manager",
+        "code": "project_manager"
+      },
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

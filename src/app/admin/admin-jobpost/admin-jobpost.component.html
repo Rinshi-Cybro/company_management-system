@@ -1,0 +1,42 @@
+<p>admin-jobpost works!</p>
+
+
+<div class="section" style="z-index: 200;">
+    <div class="main-block mt-0">
+        <div class="part1">
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-at"></i>
+            <i class="fas fa-mail-bulk"></i>
+        </div>
+            <form #jobForm="ngForm" (ngSubmit)="jobForm.valid && onSubmit()" class="main-container">
+                <h1 class="text-align-center ">Post New Job</h1>
+
+                <div class="info">
+                    <label class="form-label mt-2">Job Tittle</label>
+                    <input type="text" [(ngModel)]="jobPostData.jobTitle" name="Job title" placeholder="Enter Job Title" class="form-control form_input"/>
+                </div>
+
+                <div>
+                    <label class="form-label mt-2" >Location</label>
+                    <input type="text" [(ngModel)]="jobPostData.place" name="location" placeholder="Enter job place" class="form-control form_input"/>
+                </div>
+
+                <label class="form-label mt-2" htmlFor="fullname">Salary</label>
+                <div class="mt-1">
+                    <input type="text" [(ngModel)]="jobPostData.salary" name="salary" placeholder="Enter salary package" class="form-control form_input"/>
+                </div>
+
+                <div>
+                    <label class="form-label mt-2" >Shift</label>
+                    <input type="text" [(ngModel)]="jobPostData.shift" name="shift" placeholder="Enter type of shift" class="form-control form_input"/>
+                </div>
+
+                <button type="submit" href="">Submit</button>
+            </form>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,17 @@
+.section {
+    position:relative;
+    padding-right: 60px;
+
+}
+ 
+.badge-settings {
+    width: 54%;
+    height: 26px;
+    padding-top: 6%;
+    margin-top: 26px;
+}
+
+.body-col {
+    background-color: lavender;
+
+}
